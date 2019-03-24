@@ -463,7 +463,7 @@ void ThreadNtpSamples(void* parg) {
     // Make this thread recognisable as time synchronization thread
     RenameThread("tekcoin-ntp-samples");
 
-    CMedianFilter<int64> vTimeOffsets(200,0);
+    CMedianFilter<int64> vTimeOffsets(21,0);
 
     while (!fShutdown) {
         if (strTrustedUpstream != "localhost") {
