@@ -931,7 +931,7 @@ public:
             printf("GetStakeEntropyBit: hashSig=%s", hashSig.ToString().c_str());
         hashSig >>= 159; // take the first bit of the hash
         if (fDebug && GetBoolArg("-printstakemodifier"))
-            printf(" entropybit=%"PRI64d"\n", hashSig.Get64());
+            printf(" entropybit=%" PRI64d "\n", hashSig.Get64());
         return hashSig.Get64();
     }
 
